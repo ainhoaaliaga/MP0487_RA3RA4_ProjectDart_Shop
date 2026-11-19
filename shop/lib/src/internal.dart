@@ -67,7 +67,7 @@ double calculateFinalTotal(double subtotal, double discountAmount) {
 /// Returns the Product if found, null otherwise
 Product? findProductById(List<Product> catalog, int productId) {
   if (productId >= 1 && productId <= catalog.length) {
-    return catalog[productId-1];
+    return catalog[productId];
   }
   return null;
 }
@@ -82,5 +82,5 @@ int? validateProductId(String? input, int catalogLength) {
   if (chosenId != null && chosenId >= 1 && chosenId <= catalogLength) {
     return chosenId;
   }
-  return chosenId;
+  return null;
 }
